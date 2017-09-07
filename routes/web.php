@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('articles','ArticleController');
+Route::resource('partycipiants','UserController');
+
