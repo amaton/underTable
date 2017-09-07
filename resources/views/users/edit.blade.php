@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Article</h2>
+                <h2>Edit user</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('articles.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
         </div>
     @endif
 
-    {!! Form::model($article, ['method' => 'PATCH','route' => ['articles.update', $article->id]]) !!}
-        @include('articles.form')
+    {!! Form::model($user, ['method' => 'PATCH','route' => ['users.update', $user->id]]) !!}
+        @include('users.form')
     {!! Form::close() !!}
 
 @endsection

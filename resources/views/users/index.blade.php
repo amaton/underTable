@@ -7,7 +7,7 @@
                 <h2>Laravel 5.5 CRUD underTable Music Label from scratch</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('articles.create') }}"> Create New Article</a>
+                <a class="btn btn-success" href="{{ route('users.create') }}"> Create New user</a>
             </div>
         </div>
     </div>
@@ -21,19 +21,21 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Title</th>
-            <th>Body</th>
+            <th>Name</th>
+            <th>Spec.</th>
+            <th>Info</th>
             <th width="280px">Action</th>
         </tr>
-    @foreach ($articles as $article)
+    @foreach ($users as $user)
     <tr>
         <td>{{ ++$i }}</td>
-        <td>{{ $article->title}}</td>
-        <td>{{ $article->body}}</td>
+        <td>{{ $user->name}}</td>
+        <td>{{ $user->speciality}}</td>
+        <td>{{ $user->description}}</td>
         <td>
-            <a class="btn btn-info" href="{{ route('articles.show',$article->id) }}">Show</a>
-            <a class="btn btn-primary" href="{{ route('articles.edit',$article->id) }}">Edit</a>
-            {!! Form::open(['method' => 'DELETE','route' => ['articles.destroy', $article->id],'style'=>'display:inline']) !!}
+            <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+            <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+            {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
         </td>
@@ -41,5 +43,5 @@
     @endforeach
     </table>
 
-    {!! $articles->links() !!}
+    {!! $users->links() !!}
 @endsection

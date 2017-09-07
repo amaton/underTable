@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2<Add New Article</h2>
+                <h2> New Participiant</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('articles.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
         </div>
     @endif
 
-    {!! Form::open(array('route' => 'articles.store','method'=>'POST')) !!}
-         @include('articles.form')
+    {!! Form::open(array('route' => 'users.store','method'=>'POST')) !!}
+         @include('users.form')
     {!! Form::close() !!}
 
 @endsection
