@@ -13,6 +13,12 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>Pass:</strong>
+            {!! Form::password('password', null, array('placeholder' => '*******','class' => 'form-control password')) !!}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>Speciality:</strong><br>
             <small>e.g. prudcer, selector, dj, collectioner, dancer, promouter, friend enc.</small>
             {!! Form::text('speciality', null, array('placeholder' => 'Speciality','class' => 'form-control email')) !!}
@@ -20,7 +26,7 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Description:</strong>
+            <strong>Description:</strong><br>
             <small>feel free to put here links for your music such like soundcloud / mixcloud;</small>
             {!! Form::textarea('description', null, array('placeholder' => 'About YOU ...','class' => 'form-control','style'=>'height:150px')) !!}
         </div>

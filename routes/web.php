@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::resource('articles','ArticleController');
-Route::resource('partycipiants','UserController');
+Route::resource('users','UserController');
 

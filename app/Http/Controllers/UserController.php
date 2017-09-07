@@ -41,7 +41,7 @@ class UserController extends Controller
         request()->validate([
             'name' => 'required',
             'email' => 'email',
-            'speciality' = 'required',
+            'speciality' => 'required',
         ]);
         User::create($request->all());
         return redirect()->route('users.index')
@@ -84,7 +84,7 @@ class UserController extends Controller
         request()->validate([
             'name' => 'required',
             'email' => 'email',
-            'speciality' = 'required',
+            'speciality' => 'required',
         ]);
         User::find($id)->update($request->all());
         return redirect()->route('users.index')
