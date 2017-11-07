@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="/articles">Info Board</a>
-                    <a href="/partycipiants">Partycipiants</a>
+                    <a href="/users">Partycipiants</a>
                 </div>
             </div>
         </div>
